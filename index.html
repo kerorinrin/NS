@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <title>Home</title>
+  <script src="./js/jquery-3.6.4.js"></script>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kerorinrin/NS/a875ce90185d8899bd4e976be7ec84abbec3f524/images/logo16.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <i class="bii bi-list"></i>
+      <img
+        src="https://raw.githubusercontent.com/kerorinrin/NS/0b81528c72204ca63cb1f042b4c563b8e86e6352/images/moji-logo.svg"
+        alt="logo">
+      <h2>客製化專業日語服務</h2>
+    </div>
+
+
+    <nav id="nav">
+      <i class="bii bi-x-circle"></i>
+      <ul class="main-nav">
+        <li><a href="#container2">服務項目</a></li>
+        <li><a href="#">服務價格</a></li>
+        <li><a href="#">實用情報</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">聯絡我們</a></li>
+      </ul>
+      <ul class="sub-nav">
+        <li class="search-container">
+          <form action="/search" method="get">
+            <input type="text" name="query" placeholder="搜尋...">
+            <button type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </li>
+        <div class="lang-container">
+          <select name="lang">
+            <option id="tw" value="zh-TW">繁體中文</option>
+            <option value="En">ENGLISH</option>
+          </select>
+        </div>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <div class="catchcopy">
+    
+    <div id="big-title">實現目標，<br> 從這裡開始</div>
+
+
+      <a href="#" id="popup-link"><i class="bi bi-calculator"></i> 免費線上估價</a>      
+
+      <div id="popup-container">
+        <div id="popup-content">
+          <i class="bi bi-x-lg"></i>
+          <h2>免費線上估價</h2>
+          <form id="pricingForm">
+            <label for="service-type">服 務 項 目</label>
+            <select id="service-type" class="input-style" name="type">
+              <option value="translation">翻 譯 </option>
+              <option value="revision">編 修</option>
+              <option value="interpret">口 譯</option>
+              <option value="jlpt">日 檢 專 攻</option>
+              <option value="customization">客 製 化 教 學</option>
+              <option value="others">其 他</option>
+            </select>
+      
+            <label for="service-field">案 件 類 型</label>
+            <select id="service-field" class="input-style" name="field">
+              <option value="translation">小 論 文 </option>
+              <option value="revision">編 修</option>
+              <option value="revision">口 譯</option>
+              <option value="revision">日 檢 專 攻</option>
+              <option value="revision">客 製 化 教 學</option>
+              <option value="revision">其 他</option>
+            </select>
+      
+            <label for="service-quantities">字數 / 時數</label>
+            <input id="service-quantities" class="input-style input-width" type="number" name="quantities" placeholder="請輸入字數或時數">
+      
+            <button id="submitButton" type="submit" name="submit">送出</button>
+          </form>
+        </div>
+      </div>
+      
+      <button id="backToTopBtn" class="btn btn-primary back-to-top-btn" title="回到頂部"><i class="bi bi-chevron-double-up"></i></button>
+
+      
+      
+      <div id="catchcopy-2">
+        Nihongo Studio的專業譯者擁有超過10年的日語編譯和教學經驗。
+        除了各式文件的翻譯與編修，更可針對個別需求提供顧問諮詢、模擬面試、日語課程等客製化服務。 <br><br>
+        我們深刻明白實現目標的重要性，已成功協助多人考取獎學金，得到理想學校或公司的錄取，並曾服務過多間世界500強企業。
+      </div>
+
+
+     
+      
+    </div>
+
+
+    <div id="container2">
+      <h1>服務項目</h1>
+      <div class="container-services">
+
+        <div>
+          <h2><i class="bi bi-translate"></i> 翻譯</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatum!</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div>
+          <h2><i class="bi bi-pencil"></i> 編修</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatum!</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div>
+          <h2><i class="bi bi-mic"></i> 口譯</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatum!</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div>
+          <h2><i class="bi bi-journal-bookmark-fill"></i> 日檢專攻</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatum!</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div>
+          <h2><i class="bi bi-mortarboard"></i> 客製化教學</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatum!</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div>
+          <h2><i class="bi bi-lightbulb"></i> 其他</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatum!</p>
+          <a href="#">了解更多</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-ap">
+      <div class="about-pic"></div>
+      <div class="about">
+        <h1> 關於Nihongo Studio </h1>
+        <p>Nihongo
+          Studio是一間小型的日語工作室，專門提供研究計畫、(小)論文、履歷書、推薦信、各式商業文件的日文翻譯與編修，以及口譯和客製化的教學服務。主要成員畢業於東京大學等名校，曾經或現正任職於朝日新聞社、ENEOS株式会社、Amazon等世界500強企業，擁有10年以上的相關經驗。
+        </p>
+        <br>
+        <p>
+          我們深刻明白如何寫出實現夢想的日語文件，也幫助過許多人申請到獎學金、理想的學校，或拿到工作機會等。我們的日語服務不僅限於表面的字詞，致力於保持原意的前提下改進語法、句構等錯誤，提升日語層次，更能凸顯出文章所要傳達的訊息。同時也會依客戶需求提供專業的建議，以達成目標。每個案件我們都全力以赴，您的成功是我們持續前進的動力！
+        </p>
+      </div>
+
+      <div class="promise-pic"></div>
+
+      <div class="promise">
+        <h1> 五大承諾 </h1>
+        <p><i class="bi bi-shield-check"></i>精通中日語的台籍、日籍譯者親自操刀</p>
+        <p><i class="bi bi-shield-check"></i>台日籍譯者輪流校稿，確保中日文間無落差</p>
+        <p><i class="bi bi-shield-check"></i>線上估價，無需等待</p>
+        <p><i class="bi bi-shield-check"></i>合理的價格，高品質、專業的日語服務 </p>
+        <p>(本工作室譯者親筆，無仲介、外包等中間費用)</p>
+        <p><i class="bi bi-shield-check"></i>量身打造的客製化服務，精準滿足您的需求</p>
+      </div>
+    </div>
+
+    <footer style="background-color:#777; padding: 0; margin: 0; height: 80px; text-align: center;">
+      <br><br>
+      &copy;2023 Nihongo-Studio.co
+
+    </footer>
+
+    <script>
+
+      $(document).ready(function () {
+        $('select[name=lang]').change(function () {
+          if ($(this).val() == "zh-TW") {
+            $(this).addClass("tw-flag").removeClass('us-flag');
+          } else if ($(this).val() == "En") {
+            $(this).addClass("us-flag").removeClass('tw-flag');
+          }
+        });
+      });
+
+
+
+      $(function () {
+        const List = $(".bi-list");
+        const X = $(".bi-x-circle");
+        const Nav = $("#nav");
+
+        List.on("click", function () { $(this).toggleClass('open'); Nav.toggleClass('open') });
+        X.on("click", function () { $(this).toggleClass('open'); Nav.toggleClass('open') });
+      });
+
+
+
+
+  $(document).ready(function() {
+
+  $('#popup-link').click(function() {
+    $('#popup-container').fadeIn();
+    $('#catchcopy-2').hide();
+  });
+  
+  $('#popup-container').click(function(e) {
+    if (e.target.id === 'popup-container') {
+      $('#popup-container').fadeOut();
+      $('#catchcopy-2').show();
+    }
+  });
+  
+  $('#submitButton').click(function(e) {
+    e.preventDefault();
+    // 在此处添加表单提交代码
+  });
+
+  $('#popup-content .bi-x-lg').click(function() {
+    $('#popup-container').fadeOut();
+    $('#catchcopy-2').show();
+  });
+
+});
+
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 200) {
+      $('#backToTopBtn').fadeIn();
+    } else {
+      $('#backToTopBtn').fadeOut();
+    }
+  });
+
+  $('#backToTopBtn').click(function() {
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+});
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

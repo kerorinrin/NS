@@ -1,0 +1,504 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img,
+ ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, 
+ tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+  summary,time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	/* font: inherit; */
+	vertical-align: baseline;
+  color:#333;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif, 'Noto Sans TC', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  text-align: center;
+}
+a{text-decoration: none;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul, nav{list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {
+  content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===========index.html========= */
+/* ============================== */
+/* ===========Header============= */
+header{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: sticky; top: 0; 
+  z-index: 2;
+}
+.header-top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border-bottom: 1px solid #9fa1a3;
+  }
+  .header-top>h2{display: none;}
+  #nav{
+    width: 100%; 
+    font-size: 1.2em; 
+    position: fixed; top: 0; right: -100%;
+    padding: 7% 25%; 
+    background-color: #DEE2E5;
+      
+    opacity: 0.98; transition: right .7s; z-index: 1;}
+  #nav.open{right: 0;}
+  #nav a{
+      display: block;
+      line-height: 2.5;
+      border-bottom: 1px solid #fff;
+    }
+.bi-list{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 1.5em;
+  }
+.bi-x-circle{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 1.5em;
+  }
+  .search-container {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+  }
+input[type=text], select[name=lang]{
+    padding: 10px;
+    border: 1px solid #DEE2E5;
+    border-radius: 5px 0 0 5px;
+    width: 65%;
+    font-size: 16px;
+  }
+button[type=submit] {
+    background-color: #E60000;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    height: 40px;
+  }
+  button[type=submit]:hover {
+    background-color: #2F73D6;
+  }
+  
+  .bi-search{
+    color: #fff;
+  }
+  select[name=lang]{
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 1.5em;
+    font-family: 'Inter', sans-serif, 'Noto Sans TC', sans-serif;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 80px;
+    background-image: url(https://raw.githubusercontent.com/kerorinrin/NS/0b81528c72204ca63cb1f042b4c563b8e86e6352/images/flag_tw1.svg);
+    font-size: 12px;
+    font-weight: bold;
+  } 
+  
+  select[name=lang].tw-flag {
+    background-image: url(https://raw.githubusercontent.com/kerorinrin/NS/0b81528c72204ca63cb1f042b4c563b8e86e6352/images/flag_tw1.svg);
+  }
+  select[name=lang].us-flag {
+    background-image: url(https://raw.githubusercontent.com/kerorinrin/NS/0b81528c72204ca63cb1f042b4c563b8e86e6352/images/flag_us1.svg);
+  }
+  .lang-container{
+    height: 45px;
+    margin-top: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+
+  .back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 9999;
+  }  
+  .bi-chevron-double-up{
+    color: #2F73D6;
+    font-weight: bold;
+    font-size: 2em;
+   
+  }
+  /* #backToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #backToTopButton:hover {
+    background-color: #0069d9;
+  }
+   */
+  
+/* ===========Page 1============= */
+.catchcopy{
+  width: 100%;
+  height: 85vh;
+  background-image: url(https://github.com/kerorinrin/NS/blob/main/images/index-bg.jpg?raw=true); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes fadeInFromRight{
+  from{opacity: 0; transform: translateX(+100%);}
+  to{opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInMove{
+  from{opacity: 0; transform: translateX(-100%);}
+  to{opacity: 1; transform: translateX(0);}
+}
+#big-title{
+  color: #C20C18;
+  text-shadow: 0 0 10px rgba(0, 0, 0,.5);
+  font-size: 2.3em;
+  font-weight: bold;
+  line-height: 2;
+  position: absolute;
+  top: 16%;
+  left: 20%;
+
+}
+.catchcopy>a{
+  font-size: 1.2em;
+  background-color:#fff;
+  color:#2F73D6;
+  border: 2px solid #2F73D6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  position: absolute;
+  top: 48%;left: 50%;
+  transform: translate(-50% ,-50%);
+}
+.bi-calculator{color:#2F73D6;}
+
+.catchcopy>a:hover{
+  background-color: #2F73D6;
+  color:#fff;
+}
+.catchcopy>a:hover .bi-calculator{color:#fff;}
+
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.bi-x-lg{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+.catchcopy div:last-child{
+  line-height: 1.5;
+  font-size: 1em;
+  width: 95%;
+  position: absolute;
+  top: 66%;
+  left: 3%;
+}
+
+.caculator{
+  width: 80%;
+  height: 48vh;
+  margin: 50px auto 60px auto;
+  border: 1px solid rgba(194, 12, 24,.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+} 
+.caculator>h1{color:rgb(194, 12, 24) ;}
+
+#pricingForm {
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template:repeat(3, 1fr) / repeat(2, 1fr) ;
+  align-items: center;
+  row-gap: 36px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.input-style{
+  display: block;
+  width: 150px;
+  height: 30px;
+  font-family: 'Inter', sans-serif, 'Noto Sans TC', sans-serif;
+  font-size: 1em;
+}
+#service-quantities{
+  width: 150px;
+  height: 30px; 
+  font-size: .8em;
+}  
+#submitButton{
+  grid-column: 1/3;
+  width: 48%;
+  padding: 8px 0;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 1em;
+}
+#pricingForm2{
+  display: none;
+}
+
+/* ----------SERVICES------------ */
+#container2{
+  padding-bottom: 30px;
+}
+#container2>h1{padding-top: 68px;}
+.container-services>div>h2{text-align-last: left;}
+.container-services>div{
+  width: 72%;
+  margin: 25px auto;
+  padding: 30px 0 10px 30px;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 10px; 
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.container-services>div:hover{
+  border: 3px solid #dc2626;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.container-services a{
+  background-color: #E60000;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px 0 rgba(220, 38, 38, 0.5);
+  padding: 12px 20px; margin: 30px 0;
+  display: inline-block;
+}
+.container-services a:hover{
+  background-color: #2f73d6;
+  box-shadow: 0px 0px 6px 5px rgba(47, 115, 214, 0.25);
+}
+
+/* ----------About & Promise ------------ */
+.container-ap{  background-color: rgba(229, 231, 235, .3);}
+.about{
+  padding: 20px;
+  animation-name: fadeInFromRight;
+  animation-duration: 3s;
+}
+.about-pic{
+  background-image: url(https://github.com/kerorinrin/NS/blob/main/images/todai.jpg?raw=true);
+  width: 100%;
+  height: 48vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about>h1, .promise>h1{
+  text-align: center;
+}
+.about>h1::after, .promise>h1::after,.about>h1::before, .promise>h1::before{
+  content: '|';
+  color: red;
+}
+.about>p{
+  text-indent: 2em;
+  line-height: 2;
+}
+
+.promise-pic{
+  background-image: url(https://github.com/kerorinrin/NS/blob/main/images/promise.jpg?raw=true);
+  width: 100%;
+  height: 48vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.promise{
+  padding-left: 20px;
+  padding-top: 30px;
+  border-top: 2px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
+  animation-name: fadeInMove;
+  animation-duration: 2s;
+}
+.bi-shield-check{
+  color: red;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-right: .5em;
+}
+.promise>p{
+  line-height: 2;
+}
+.promise>p:nth-of-type(5){
+  color:#2F73D6;
+  padding: 0;
+  margin: 0;
+  text-indent: 2em;
+}
+
+
+/* ================ ======================== */
+/* 以下是桌機版再調整的 ======================== */
+/* ================ ======================== */
+/* ===========Page 1============= */
+@media (min-width: 1125px) {
+
+.header-top>h2{display: block;}
+.bii{display: none;}
+header{
+    display: flex;align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+
+  #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    width: 100%;
+    padding: 5px 30px 5px 85px;
+    background-color: #fff;
+  }
+  .main-nav, .sub-nav{display: flex;}
+  #nav a{margin-right: 2em;}
+  .search-container{
+    position: relative;
+    top: -10px;
+  }
+  select[name=lang]{
+    font-family: 'Inter', sans-serif, 'Noto Sans TC', sans-serif;
+    font-size: 0.7em;
+    font-weight: normal;
+    padding-left: 60px;
+    position: relative;
+    top: -.8em;
+    margin-top: 0;
+    width: 100%;
+  }
+.catchcopy{background-image: none;}
+.catchcopy{
+  background-image: url(https://github.com/kerorinrin/NS/blob/main/images/big-bg.jpg?raw=true);
+  height: 90vh;
+  background-size: cover;
+  margin-bottom: 90px;
+}
+
+#big-title{
+  font-size: 3em;
+  position: absolute;
+  top: 48vh;
+  left: 22vw;
+   animation-name: none;
+   animation-name: fadeInMove;
+  animation-duration: 3s;
+}
+#catchcopy-2{
+  font-size: 1.2em;
+  width: 38%;
+  position: absolute;
+  top: 36vh;
+  left: 60vw;
+}
+#popup-link{
+  /* display: none; */
+  position: absolute;
+  top: 66vh;
+  left: 65vw;
+}
+
+
+
+/* ===========pricing============= */
+#pricingForm {
+  width: 80%;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.5em;
+  row-gap: 60px;
+}
+/* ---------------SERVICES------------------------ */
+.container-services{
+  width: 78%;
+  margin: 3% auto;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+/* ---------------About & Promises------------------------ */
+.container-ap{
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.about-pic{
+width: auto;
+ height: 642px;
+  background-position: center;
+}
+.about{line-height: 2;padding: 0 15%; height: 642px;padding-top: 3%;}
+.about p{font-size: 1.2em;}
+.promise{ height: 642px;padding-top: 10%;width: 90%;}
+.promise-pic{width: 100%;  height: 642px;order: 1;}
+.promise p{line-height: 3;font-size: 1.2em;margin-left: 22%;}
+
+.promise>p:nth-of-type(5){
+  text-indent: 28%;
+  line-height: 0;
+  position: relative;
+  top: -0.8em;
+  
+}
+
+
+}
+
+
